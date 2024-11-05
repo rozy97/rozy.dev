@@ -1,6 +1,6 @@
 
 export default function Home() {
   return (
-    <main>Homepage===</main>
+    <main>This is Home Page</main>
   );
 }
