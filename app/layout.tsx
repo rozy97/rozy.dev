@@ -16,6 +16,15 @@ export const metadata: Metadata = {
   title: "Rozy",
   icons: "/favicon.png",
   description: "Firmansyah Rozy | Software Engineer",
+  metadataBase: new URL('https://rozy.dev'),
+  openGraph: {
+    type: "website",
+    url: "https://rozy.dev",
+    title: "Firmansyah Rozy",
+    description: "Software Engineer",
+    siteName: "Firmansyah Rozy's portfolio site",
+    images: '/rozy.png'
+  }
 };
 
 export default function RootLayout({
