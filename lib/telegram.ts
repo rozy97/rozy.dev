@@ -10,9 +10,11 @@ export interface param {
 }
 
 export async function sendMessage(props: param) {
-    const chatId = 5987551082
+    const chatId = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID || ''
+    console.log("chat id: ", chatId)
 
-    const botToken = '7932616830:AAEGEFZ9BlgosMblE-LCA3zL_HeGVCVRHs0';
+    const botToken = process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN || ''
+    console.log("bot token: ", botToken)
     const text = `New Form Submission:\n\nName: ${props.firstname} ${props.lastname}\nEmail: ${props.email}\nPhone: ${props.phone}\nService: ${props.service}\nMessage: ${props.message}`;
 
     const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
