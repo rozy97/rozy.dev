@@ -6,10 +6,31 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import Link from "next/link";
+import { Metadata } from "next";
+import converter from "number-to-words"
+
+const currentYear = new Date().getFullYear()
+const yearOfExpWord = converter.toWords(currentYear - 2019)
+
+
+export const metadata: Metadata = {
+  title: "Rozy | Resume",
+  icons: "/favicon.png",
+  description: `I'm a backend-focused software engineer with over ${yearOfExpWord} years of experience, specializing in microservices architecture with Golang.`,
+  metadataBase: new URL('https://rozy.dev/resume'),
+  openGraph: {
+    type: "website",
+    url: "https://rozy.dev/resume",
+    title: "Firmansyah Rozy",
+    description: `I'm a backend-focused software engineer with over ${yearOfExpWord} years of experience, specializing in microservices architecture with Golang.`,
+    siteName: "Firmansyah Rozy's portfolio site",
+    images: 'https://raw.githubusercontent.com/rozy97/rozy.dev/refs/heads/main/public/capture-resume.png'
+  }
+};
 
 const about = {
   title: "about me",
-  description: `I'm a backend-focused software engineer with over five years of experience, specializing in microservices architecture with Golang. Since 2019, I’ve built scalable, high-performance systems, focusing on creating efficient APIs and secure, robust infrastructures. Passionate about quality and best practices, I aim to deliver reliable solutions that meet complex business needs.`,
+  description: `I'm a backend-focused software engineer with over ${yearOfExpWord} years of experience, specializing in microservices architecture with Golang. Since 2019, I’ve built scalable, high-performance systems, focusing on creating efficient APIs and secure, robust infrastructures. Passionate about quality and best practices, I aim to deliver reliable solutions that meet complex business needs.`,
   info: [
     {
       fieldName: "Name",

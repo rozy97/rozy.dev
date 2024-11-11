@@ -4,6 +4,7 @@ import "./globals.css";
 
 // components
 import Header from "@/components/Header";
+import { Toaster } from "@/components/ui/toaster"
 // import PageTransition from "@/components/PageTransition";
 
 const jetBrainsMono = JetBrains_Mono({
@@ -13,7 +14,7 @@ const jetBrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Rozy",
+  title: "Rozy | Home",
   icons: "/favicon.png",
   description: "Firmansyah Rozy | Software Engineer",
   metadataBase: new URL('https://rozy.dev'),
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     title: "Firmansyah Rozy",
     description: "Software Engineer",
     siteName: "Firmansyah Rozy's portfolio site",
-    images: 'https://raw.githubusercontent.com/rozy97/rozy.dev/refs/heads/main/public/capture-website.png'
+    images: 'https://raw.githubusercontent.com/rozy97/rozy.dev/refs/heads/main/public/capture-main.png'
   }
 };
 
@@ -40,6 +41,7 @@ export default function RootLayout({
         <Header />
         {/* <PageTransition>{children}</PageTransition> */}
         {children}
+        <Toaster />
         
       </body>
     </html>
