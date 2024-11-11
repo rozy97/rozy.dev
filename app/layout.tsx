@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "Firmansyah Rozy",
     description: "Software Engineer",
     siteName: "Firmansyah Rozy's portfolio site",
-    images: '/rozy.png'
+    images: 'https://raw.githubusercontent.com/rozy97/rozy.dev/refs/heads/main/public/capture-website.png'
   }
 };
 
