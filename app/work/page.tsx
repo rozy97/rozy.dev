@@ -17,9 +17,9 @@ const projects = [
     num: "01",
     category: "backend",
     title: "Reku",
-    description: "Trading Platform focusing on Crypto & US Stock Assets",
-    stack: [{ name: "PHP" }, { name: "Go" }, { name: "MySQL" }, { name: "TimescaleDB" }, { name: "Redis" }, { name: "Kafka" }],
-    image: "/assets/work/reku.png",
+    description: "Trading Platform focusing on Crypto & US Stock Assets. Buy & Sell Assets, Manage bundle Assets Using Pocket, Transfer Assets, Daily Reward Quiz Guessing Assets price. Using Microservices Architecture on the Server Side.",
+    stack: [{ name: "PHP" }, { name: "Go" }, { name: "MySQL" }, { name: "TimescaleDB" }, { name: "Redis" }, { name: "Kafka" }, { name: "NextJS" }, { name: "Flutter" }],
+    image: "/assets/work/reku-2.jpg",
     live: "https://reku.id",
     github: "https://github.com/rozy97"
   },
@@ -27,9 +27,9 @@ const projects = [
     num: "02",
     category: "backend",
     title: "KoinWorks",
-    description: "Financial Super App Focusing on P2P Lending",
-    stack: [{ name: "PHP" }, { name: "Go" }, { name: "PostgreSQL" }, { name: "Redis" }, { name: "Kafka" }],
-    image: "/assets/work/koinworks.png",
+    description: "Financial Super App with 8+ products. Invest or borrow P2P lending, Buy & Sell Gold, Manage Company invoice, Manage Employee Salary, etc. Build with Microservices Architecture on the Backend Side",
+    stack: [{ name: "PHP" }, { name: "Go" }, { name: "PostgreSQL" }, { name: "Redis" }, { name: "Kafka" }, { name: "React" }, { name: "Kotlin" }, { name: "Swift" }],
+    image: "/assets/work/koinworks-2.jpg",
     live: "https://reku.id",
     github: "https://github.com/rozy97"
   },
@@ -37,9 +37,9 @@ const projects = [
     num: "03",
     category: "backend",
     title: "Forstok",
-    description: "One dashboard solution for online seller manage their sale. Integrate API to multiple marketplace such as Tokopedia, Shopee, Shopify, etc",
-    stack: [{ name: "Ruby on Rails" }, { name: "Go" }, { name: "MySQL" }, { name: "MongoDB" }, { name: "Redis" }, { name: "RabbitMQ" }],
-    image: "/assets/work/forstok.png",
+    description: "One dashboard solution for online seller manage their product, inventory, sale, invoice, & accounting. Integrate API to multiple marketplace such as Tokopedia, Shopee, Shopify, etc",
+    stack: [{ name: "Ruby on Rails" }, { name: "Go" }, { name: "MySQL" }, { name: "MongoDB" }, { name: "Redis" }, { name: "RabbitMQ" }, { name: "React" }],
+    image: "/assets/work/forstok-2.jpg",
     live: "https://forstok.com",
     github: "https://github.com/rozy97"
   }
@@ -62,7 +62,7 @@ const Work = () => {
                 {project.num}
               </div>
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category} project
+                {project.title}
               </h2>
               <p className="text-white/60">{project.description}</p>
               <ul className="flex flex-wrap gap-4">
@@ -113,7 +113,7 @@ const Work = () => {
                     <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
                       <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                       <div className="relative w-full h-full">
-                        <Image src={project.image} fill className="object-cover" alt="" />
+                        <Image src={project.image} fill className="object-cover object-top" alt="" />
                       </div>
                     </div>
                   </SwiperSlide>
